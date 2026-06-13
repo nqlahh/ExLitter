@@ -196,11 +196,11 @@ ExLitter uses **SQLite** — a lightweight, file-based database that requires ze
 │    name      │   │     │    name      │   │     │    description    │
 └──────────────┘   └─────│ FK group_id  │   │     │    total_amount   │
                          └──────────────┘   └─────│ FK paid_by_member │
-                                                   │ FK group_id       │
-                                                   └─────────┬─────────┘
-                                                             │
+                                                  │ FK group_id       │
+                                                  └─────────┬─────────┘
+                                                            │
                                               ┌──────────────▼──────────────┐
-                                              │    expense_participants      │
+                                              │    expense_participants     │
                                               ├─────────────────────────────┤
                                               │ FK expense_id               │
                                               │ FK member_id                │
@@ -242,7 +242,7 @@ No database installation needed — SQLite is embedded.
 
 ```bash
 # 1. Clone or unzip the project
-cd splitapp
+cd Exlitter
 
 # 2. Run with Maven wrapper (no Maven installation needed)
 ./mvnw spring-boot:run
