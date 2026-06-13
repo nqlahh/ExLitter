@@ -323,7 +323,7 @@ All routes are server-side rendered (no REST/JSON responses).
 
 ## ⚠️ Known Limitations
 
-- **No user authentication** — this is a single-user local app. There are no login accounts; "NAME" in the summary banner is a static placeholder.
+- **No user authentication** — this is a single-user local app. There are no login accounts.
 - **No real-time updates** — the page must be refreshed (or the Settle button submits a form) to see updated balances.
 - **SQLite concurrency** — SQLite is not suited for high-concurrency production use. For a production deployment, swap the datasource to MySQL or PostgreSQL by updating `application.properties` and the `pom.xml` driver dependency.
 - **Single split strategy** — only equal splitting is implemented. Percentage-based or exact-amount splits can be added by implementing the `SplitStrategy` interface.
